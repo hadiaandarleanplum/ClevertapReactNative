@@ -20,3 +20,9 @@ const styles = StyleSheet.create({
 });
 
 const CleverTap = require('clevertap-react-native');
+CleverTap.onUserLogin({'Name': 'React-Test', 'Identity': '11102008', 'Email': 'r@gmail.com', 'custom1': 43});
+CleverTap.recordEvent('Product Viewed', 
+  {'Product Name': 'Dairy Milk',
+                   'Category': 'Chocolate',
+                   'Amount': 20.00
+  });

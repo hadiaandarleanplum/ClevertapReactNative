@@ -18,6 +18,10 @@
 
 #import <react/config/ReactNativeConfig.h>
 
+//clevertap import 
+#import <CleverTap-iOS-SDK/CleverTap.h>
+#import <clevertap-react-native/CleverTapReactManager.h>
+
 static NSString *const kRNConcurrentRoot = @"concurrentRoot";
 
 @interface AppDelegate () <RCTCxxBridgeDelegate, RCTTurboModuleManagerDelegate> {
@@ -33,6 +37,11 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
+//CLEVERTAP CODE
+  [CleverTap autoIntegrate]; // integrate CleverTap SDK using the autoIntegrate option
+  [[CleverTapReactManager sharedInstance] applicationDidLaunchWithOptions:launchOptions];
+
   RCTAppSetupPrepareApp(application);
 
   RCTBridge *bridge = [self.reactDelegate createBridgeWithDelegate:self launchOptions:launchOptions];
