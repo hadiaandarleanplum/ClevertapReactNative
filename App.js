@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ const styles = StyleSheet.create({
 });
 
 const CleverTap = require('clevertap-react-native');
+
 CleverTap.onUserLogin({'Name': 'React-Test', 'Identity': '11102008', 'Email': 'r@gmail.com', 'custom1': 43});
 CleverTap.recordEvent('Product Viewed', 
   {'Product Name': 'Dairy Milk',
