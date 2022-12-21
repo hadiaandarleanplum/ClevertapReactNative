@@ -22,7 +22,7 @@ import java.util.List;
 
 // CleverTap imports
 import com.clevertap.android.sdk.ActivityLifecycleCallback;
-//import com.clevertap.react.CleverTapPackage;
+import com.clevertap.react.CleverTapPackage;
 import com.clevertap.android.sdk.CleverTapAPI;
 
 public class MainApplication extends Application implements ReactApplication {
