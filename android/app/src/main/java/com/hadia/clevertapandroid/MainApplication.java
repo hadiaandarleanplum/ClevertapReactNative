@@ -42,7 +42,7 @@ public class MainApplication extends Application implements ReactApplication {
       // packages.add(new MyReactNativePackage());
 
       // add CleverTapPackage to react-native package list
-      //packages.add(new CleverTapPackage());// only needed when not auto-linking
+      packages.add(new CleverTapPackage());// only needed when not auto-linking
       return packages;
     }
 
